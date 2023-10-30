@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra a Janela</title>
+    <style>
+        #janela {
+            width: 400px;
+            height: 400px;
+            background-image: url('janela fechada.png');
+            background-size: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="janela" onmouseover="abrirJanela()" onmouseout="fecharJanela()" onclick="quebrarJanela()"></div>
+
+    <script>
+        function abrirJanela() {
+            document.getElementById('janela').style.backgroundImage = "url('janela aberta.png')";
+        }
+
+        function fecharJanela() {
+            document.getElementById('janela').style.backgroundImage = "url('janela fechada.png')";
+        }
+
+        function quebrarJanela() {
+            document.getElementById('janela').style.backgroundImage = "url('janela quebrada.png')";
+        }
+    </script>
+</body>
+</html>
